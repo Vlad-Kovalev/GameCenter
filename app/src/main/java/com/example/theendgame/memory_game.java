@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.ImageButton;
 
-public class diff_easy extends AppCompatActivity {
+public class memory_game extends AppCompatActivity {
 
     TextView tvName;
     ImageButton card1, card2, card3, card4, card5, card6, card7, card8, btnBack;
@@ -21,7 +21,7 @@ public class diff_easy extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_diff_easy);
+        setContentView(R.layout.activity_memory_game);
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
@@ -83,7 +83,7 @@ public class diff_easy extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(diff_easy.this, MainActivity.class);
+                Intent intent = new Intent(memory_game.this, center.class);
                 startActivity(intent);
             }
         });

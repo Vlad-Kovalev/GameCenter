@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#9ABFE3"
-    tools:context=".diff_easy">
+    tools:context=".memory_game">
 
     <ImageButton
         android:id="@+id/btnBack"
@@ -15,33 +14,32 @@
         android:src="@drawable/arrow_back_foreground"
         android:background="@android:color/transparent"/>
 
-
     <TextView
+        android:id="@+id/tvHeader"
         android:layout_width="275dp"
         android:layout_height="50dp"
-        android:text="משחק הזיכרון"
+        android:text="Memory Game"
+        android:textStyle="bold"
         android:textSize="24sp"
         android:textColor="#333333"
         android:background="@drawable/rounded_corners"
         android:gravity="center"
         android:layout_gravity="center"/>
 
-    <Space
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"/>
+    <Space android:layout_width="wrap_content" android:layout_height="175dp"/>
 
     <TextView
         android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="Hello XXX"
         android:textSize="20sp"
         android:layout_gravity="center"
         android:layout_weight="0"
         android:layout_marginBottom="16dp"/>
 
     <GridLayout
-        android:id="@+id/gridLayout"
+        android:id="@+id/glCards"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
         android:columnCount="4"
@@ -100,7 +98,6 @@
 
     </GridLayout>
 
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnRestart"
         android:layout_width="125dp"
@@ -111,15 +108,4 @@
         android:background="@drawable/rounded_corners"
         android:layout_gravity="center_horizontal"/>
 
-    <Space
-        android:layout_width="wrap_content"
-        android:layout_height="230dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Made by: Vladislav.K"
-        android:textSize="20sp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="16dp"/>
 </androidx.appcompat.widget.LinearLayoutCompat>

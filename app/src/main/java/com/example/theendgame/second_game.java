@@ -6,16 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
-public class diff_medium extends AppCompatActivity {
+public class second_game extends AppCompatActivity {
 
     ImageButton btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_diff_medium);
+        setContentView(R.layout.activity_second_game);
         if (getSupportActionBar() != null) {getSupportActionBar().hide();}
 
         btnBack = findViewById(R.id.btnBack);
@@ -23,7 +22,7 @@ public class diff_medium extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(diff_medium.this, MainActivity.class);
+                Intent intent = new Intent(second_game.this, center.class);
                 startActivity(intent);
             }
         });

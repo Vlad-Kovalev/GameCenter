@@ -1,16 +1,14 @@
 package com.example.theendgame;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.TableLayout;
 
-public class MainActivity extends AppCompatActivity {
+public class center extends AppCompatActivity {
 
     ImageButton ibEasy, ibMedium;
     EditText etName;
@@ -18,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_center);
         if (getSupportActionBar() != null) {getSupportActionBar().hide();}
 
         ibEasy = findViewById(R.id.ibEasy);
@@ -30,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String name = etName.getText().toString();
-                Intent intent = new Intent(MainActivity.this, diff_easy.class);
+                Intent intent = new Intent(center.this, memory_game.class);
                 intent.putExtra("keyname", name);
                 startActivity(intent);
             }
@@ -40,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String name = etName.getText().toString();
-                Intent intent = new Intent(MainActivity.this, diff_medium.class);
+                Intent intent = new Intent(center.this, second_game.class);
                 intent.putExtra("keyname", name);
                 startActivity(intent);
             }
