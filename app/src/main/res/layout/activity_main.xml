@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#9ABFE3"
+    tools:context=".MainActivity">
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"/>
+
+    <TextView
+        android:layout_width="275dp"
+        android:layout_height="50dp"
+        android:text="אפליקציאת משחקים"
+        android:textSize="24sp"
+        android:textColor="#333333"
+        android:background="@drawable/rounded_corners"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="175dp"
+            android:layout_height="48dp"
+            android:hint="Enter your name!"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColorHint="#A8333333"
+            android:background="@drawable/rounded_edit_text"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"/>
+
+    <TableLayout
+        android:id="@+id/tlShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow android:gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/ibEasy"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:src="@drawable/memorygame" />
+
+
+            <ImageButton
+                android:id="@+id/ibMedium"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:src="@drawable/taki" />
+
+        </TableRow>
+
+        <TableRow android:gravity="center">
+
+            <TextView
+                android:text="משחק הזיכרון"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:layout_margin="10dp" />
+
+            <TextView
+                android:text="טאקי"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:layout_margin="10dp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Made by: Vladislav.K"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:layout_weight="0"
+        android:layout_marginBottom="16dp"/>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

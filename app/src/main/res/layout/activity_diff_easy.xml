@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#9ABFE3"
+    tools:context=".diff_easy">
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/arrow_back_foreground"
+        android:background="@android:color/transparent"/>
+
+
+    <TextView
+        android:layout_width="275dp"
+        android:layout_height="50dp"
+        android:text="משחק הזיכרון"
+        android:textSize="24sp"
+        android:textColor="#333333"
+        android:background="@drawable/rounded_corners"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"/>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:layout_weight="0"
+        android:layout_marginBottom="16dp"/>
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:columnCount="4"
+        android:rowCount="2"
+        android:padding="16dp"
+        android:useDefaultMargins="true"
+        android:layout_gravity="center_horizontal">
+
+        <ImageButton
+            android:id="@+id/card1"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/card_back" />
+
+        <ImageButton
+            android:id="@+id/card2"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/card_back"/>
+
+        <ImageButton
+            android:id="@+id/card3"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/card_back"/>
+
+        <ImageButton
+            android:id="@+id/card4"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/card_back" />
+
+        <ImageButton
+            android:id="@+id/card5"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/card_back"/>
+
+        <ImageButton
+            android:id="@+id/card6"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/card_back"/>
+
+        <ImageButton
+            android:id="@+id/card7"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/card_back"/>
+
+        <ImageButton
+            android:id="@+id/card8"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/card_back"/>
+
+    </GridLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRestart"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:text="Restart"
+        android:textSize="18sp"
+        android:textColor="#333333"
+        android:background="@drawable/rounded_corners"
+        android:layout_gravity="center_horizontal"/>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="230dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Made by: Vladislav.K"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"/>
+</androidx.appcompat.widget.LinearLayoutCompat>
