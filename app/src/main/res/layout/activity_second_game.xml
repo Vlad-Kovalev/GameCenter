@@ -26,17 +26,21 @@
         android:gravity="center"
         android:layout_gravity="center"/>
 
-    <Space android:layout_width="wrap_content" android:layout_height="175dp"/>
+    <Space android:layout_width="wrap_content" android:layout_height="275dp"/>
 
     <TextView
-        android:id="@+id/tvName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello XXX"
-        android:textSize="20sp"
-        android:layout_gravity="center"
-        android:layout_weight="0"
-        android:layout_marginBottom="16dp"/>
+        android:id="@+id/tvRandomizer"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
+        android:text="XXX the number is: "
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="#333333"
+        android:background="@drawable/rounded_corners"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+
+    <Space android:layout_width="wrap_content" android:layout_height="15dp"/>
 
     <TableLayout
         android:layout_width="match_parent"
@@ -47,23 +51,31 @@
             android:layout_height="250dp">
 
             <ImageView
+                android:id="@+id/ivFirstDice"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/card_back"
+                android:src="@drawable/dice1"
                 android:layout_marginLeft="20dp">
             </ImageView>
 
             <Space android:layout_width="70dp" android:layout_height="150dp"/>
 
             <ImageView
+                android:id="@+id/ivSecondDice"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/card_back">
+                android:src="@drawable/dice6">
             </ImageView>
 
         </TableRow>
-
     </TableLayout>
 
+    <Button
+        android:id="@+id/btnRandom"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Randomize"
+        android:textSize="20sp"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

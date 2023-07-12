@@ -95,9 +95,9 @@ public class memory_game extends AppCompatActivity {
         });
 
         Intent intent = getIntent();
-        String receivedName = intent.getStringExtra("keyname");
+        String recivedName = intent.getStringExtra("keyname");
         TextView textView = findViewById(R.id.tvName);
-        textView.setText("Hello " + receivedName);
+        textView.setText("Hello " + recivedName);
     }
 
     private void flipCard(ImageButton card) {
@@ -126,17 +126,15 @@ public class memory_game extends AppCompatActivity {
         }
     }
 
-
     private int getImageResource(ImageButton card) {
         if (card == card1 || card == card2) {
-            return R.drawable.firstpic;
-        } else if (card == card3 || card == card4) {
-            return R.drawable.secondpic;
-        } else if (card == card5 || card == card6) {
-            return R.drawable.thirdpic;
-        } else if (card == card7 || card == card8) {
-            return R.drawable.fourthpic;
-        }
+            return R.drawable.firstpic;}
+        else if (card == card3 || card == card4) {
+            return R.drawable.secondpic;}
+        else if (card == card5 || card == card6) {
+            return R.drawable.thirdpic;}
+        else if (card == card7 || card == card8) {
+            return R.drawable.fourthpic;}
         return 0;
     }
 
