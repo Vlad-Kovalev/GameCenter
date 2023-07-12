@@ -38,7 +38,7 @@ public class center extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String name = etName.getText().toString();
-                Intent intent = new Intent(center.this, second_game.class);
+                Intent intent = new Intent(center.this, dice_roll.class);
                 intent.putExtra("keyname", name);
                 startActivity(intent);
             }

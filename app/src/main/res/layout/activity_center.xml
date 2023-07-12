@@ -58,7 +58,7 @@
                 android:layout_height="125dp"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
-                android:src="@drawable/taki" />
+                android:src="@drawable/diceroll" />
         </TableRow>
 
         <TableRow android:gravity="center">
@@ -71,8 +71,8 @@
                 android:layout_margin="10dp" />
 
             <TextView
-                android:id="@+id/tvTaki"
-                android:text="Taki"
+                android:id="@+id/tvDiceRoll"
+                android:text="Dice Roll"
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:gravity="center_horizontal"

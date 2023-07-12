@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#9ABFE3"
-    tools:context=".second_game">
+    tools:context=".dice_roll">
 
     <ImageButton
         android:id="@+id/btnBack"
