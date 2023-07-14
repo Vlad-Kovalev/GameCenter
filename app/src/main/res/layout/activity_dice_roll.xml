@@ -38,7 +38,8 @@
         android:textColor="#333333"
         android:background="@drawable/rounded_corners"
         android:gravity="center"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:visibility="invisible"/>
 
     <Space android:layout_width="wrap_content" android:layout_height="15dp"/>
 
@@ -70,12 +71,17 @@
         </TableRow>
     </TableLayout>
 
-    <Button
-        android:id="@+id/btnRandom"
-        android:layout_width="wrap_content"
+    <Space android:layout_width="wrap_content" android:layout_height="25dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRoll"
+        android:layout_width="150dp"
         android:layout_height="55dp"
         android:layout_gravity="center_horizontal"
-        android:text="Randomize"
-        android:textSize="20sp"/>
+        android:text="Roll"
+        android:textSize="18sp"
+        android:background="@drawable/randomize_button"
+        style="?android:attr/borderlessButtonStyle"
+        />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
