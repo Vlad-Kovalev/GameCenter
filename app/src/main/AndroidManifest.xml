@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TheEndGame"
         tools:targetApi="31">
+
         <activity
             android:name=".dice_roll"
             android:exported="false">
@@ -40,5 +41,5 @@
                 android:value="" />
         </activity>
     </application>
-
+<uses-permission android:name="android.permission.VIBRATE"/>
 </manifest>

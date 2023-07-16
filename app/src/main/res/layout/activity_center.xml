@@ -43,7 +43,7 @@
         android:layout_height="wrap_content">
 
         <TableRow android:gravity="center">
-            <ImageButton
+            <ImageView
                 android:id="@+id/ibEasy"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
@@ -52,7 +52,7 @@
                 android:src="@drawable/memorygame" />
 
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/ibMedium"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
@@ -68,7 +68,7 @@
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:gravity="center_horizontal"
-                android:layout_margin="10dp" />
+                android:layout_width="125dp"/>
 
             <TextView
                 android:id="@+id/tvDiceRoll"

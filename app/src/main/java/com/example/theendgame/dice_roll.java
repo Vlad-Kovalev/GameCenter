@@ -3,14 +3,18 @@ package com.example.theendgame;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.VibrationEffect;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.Random;
+import android.os.Vibrator;
 
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -34,6 +38,7 @@ public class dice_roll extends AppCompatActivity {
         ivFirstDice = findViewById(R.id.ivFirstDice);
         ivSecondDice = findViewById(R.id.ivSecondDice);
 
+
         btnBack.setOnClickListener(v -> {
             Intent intent = new Intent(dice_roll.this, center.class);
             startActivity(intent);
@@ -51,6 +56,13 @@ public class dice_roll extends AppCompatActivity {
                 tvRandomizer.setVisibility(View.VISIBLE);
                 btnRoll.setText("Re-roll");
             }, 900);
+
+            if (Build.VERSION.SDK_INT >= 26) {
+                ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(VibrationEffect.createOneShot(900, VibrationEffect.DEFAULT_AMPLITUDE));
+            } else {
+                ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(900);
+            }
+
             String rollButtontext = (String) btnRoll.getText();
             for (int i = 0; i <= 7; i++) {
                 Animation animShake = AnimationUtils.loadAnimation(dice_roll.this, R.anim.shake);

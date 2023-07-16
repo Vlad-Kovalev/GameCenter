@@ -7,10 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class center extends AppCompatActivity {
 
-    ImageButton ibEasy, ibMedium;
+    ImageView ibEasy, ibMedium;
     EditText etName;
 
     @Override
