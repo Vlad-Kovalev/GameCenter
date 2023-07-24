@@ -28,20 +28,26 @@
 
     <Space android:layout_width="wrap_content" android:layout_height="200dp"/>
 
-
     <TextView
         android:id="@+id/tvName"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:text="XXX you won in 00 turns!"
+        android:layout_width="325dp"
+        android:layout_height="45dp"
+        android:text="Vladislav times you clicked is: 10"
         android:textStyle="bold"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textColor="#333333"
         android:background="@drawable/rounded_corners"
         android:gravity="center"
         android:layout_gravity="center"
-        android:layout_marginBottom="16dp"
-        android:visibility="visible"/>
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/ivCongrats"
+        android:layout_width="323dp"
+        android:layout_height="200dp"
+        android:src="@drawable/congrats"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"/>
 
     <GridLayout
         android:id="@+id/glCards"
@@ -51,7 +57,8 @@
         android:rowCount="2"
         android:padding="16dp"
         android:useDefaultMargins="true"
-        android:layout_gravity="center_horizontal">
+        android:layout_gravity="center_horizontal"
+        android:visibility="visible">
 
         <ImageView
             android:id="@+id/card1"
