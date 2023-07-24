@@ -87,7 +87,7 @@
         android:layout_gravity="center_horizontal"
         android:text="Roll"
         android:textSize="18sp"
-        android:background="@drawable/randomize_button"
+        android:background="@drawable/restart_reroll_btn"
         style="?android:attr/borderlessButtonStyle"
         />
 

@@ -7,78 +7,41 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.ImageButton;
+
+import java.util.Arrays;
+import java.util.Collections;
 
 public class memory_game extends AppCompatActivity {
 
-    TextView tvName;
-    ImageButton card1, card2, card3, card4, card5, card6, card7, card8, btnBack;
-    private ImageButton firstFlippedCard;
-    private ImageButton secondFlippedCard;
+    private TextView tvName;
+    private ImageView card1, card2, card3, card4, card5, card6, card7, card8, btnBack;
+    private ImageView firstFlippedCard;
+    private ImageView secondFlippedCard;
     private AppCompatButton btnRestart;
+    private ImageView[] cards = new ImageView[8];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memory_game);
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().hide();
-        }
+        if (getSupportActionBar() != null) {getSupportActionBar().hide();}
 
-        btnBack = findViewById(R.id.btnBack);
-        btnRestart = findViewById(R.id.btnRestart);
-        tvName = findViewById(R.id.tvName);
+        tvName = findViewById(R.id.tvName); btnBack = findViewById(R.id.btnBack); btnRestart = findViewById(R.id.btnRestart);
         card1 = findViewById(R.id.card1); card2 = findViewById(R.id.card2); card3 = findViewById(R.id.card3); card4 = findViewById(R.id.card4); card5 = findViewById(R.id.card5); card6 = findViewById(R.id.card6); card7 = findViewById(R.id.card7); card8 = findViewById(R.id.card8);
+        cards[0] = findViewById(R.id.card1); cards[1] = findViewById(R.id.card2); cards[2] = findViewById(R.id.card3); cards[3] = findViewById(R.id.card4); cards[4] = findViewById(R.id.card5); cards[5] = findViewById(R.id.card6); cards[6] = findViewById(R.id.card7); cards[7] = findViewById(R.id.card8);
+        Collections.shuffle(Arrays.asList(cards));
 
-        card1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                flipCard(card1);
-            }
-        });
-        card2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                flipCard(card2);
-            }
-        });
-        card3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                flipCard(card3);
-            }
-        });
-        card4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                flipCard(card4);
-            }
-        });
-        card5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                flipCard(card5);
-            }
-        });
-        card6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                flipCard(card6);
-            }
-        });
-        card7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                flipCard(card7);
-            }
-        });
-        card8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                flipCard(card8);
-            }
-        });
+        cards[0].setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {flipCard(cards[0]);}});
+        cards[1].setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {flipCard(cards[1]);}});
+        cards[2].setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {flipCard(cards[2]);}});
+        cards[3].setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {flipCard(cards[3]);}});
+        cards[4].setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {flipCard(cards[4]);}});
+        cards[5].setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {flipCard(cards[5]);}});
+        cards[6].setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {flipCard(cards[6]);}});
+        cards[7].setOnClickListener(new View.OnClickListener() {@Override public void onClick(View v) {flipCard(cards[7]);}});
+
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,7 +53,7 @@ public class memory_game extends AppCompatActivity {
         btnRestart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                restartGame();
+                recreate();
             }
         });
 
@@ -99,12 +62,12 @@ public class memory_game extends AppCompatActivity {
         TextView textView = findViewById(R.id.tvName);
         textView.setText("Hello " + recivedName);
     }
-
-    private void flipCard(ImageButton card) {
+    private void flipCard(ImageView card) {
         if (firstFlippedCard == null) {
             firstFlippedCard = card;
             card.setImageResource(getImageResource(card));
-        } else if (secondFlippedCard == null) {
+        }
+        else if (secondFlippedCard == null) {
             secondFlippedCard = card;
             card.setImageResource(getImageResource(card));
 
@@ -126,29 +89,16 @@ public class memory_game extends AppCompatActivity {
         }
     }
 
-    private int getImageResource(ImageButton card) {
-        if (card == card1 || card == card2) {
+    private int getImageResource(ImageView card) {
+
+        if (card == cards[0] || card == cards[1]) {
             return R.drawable.firstpic;}
-        else if (card == card3 || card == card4) {
+        else if (card == cards[2] || card == cards[3]) {
             return R.drawable.secondpic;}
-        else if (card == card5 || card == card6) {
+        else if (card == cards[4] || card == cards[5]) {
             return R.drawable.thirdpic;}
-        else if (card == card7 || card == card8) {
+        else if (card == cards[6] || card == cards[7]) {
             return R.drawable.fourthpic;}
-        return 0;
-    }
-
-    private void restartGame() {
-        firstFlippedCard = null;
-        secondFlippedCard = null;
-
-        card1.setImageResource(R.drawable.card_back);
-        card2.setImageResource(R.drawable.card_back);
-        card3.setImageResource(R.drawable.card_back);
-        card4.setImageResource(R.drawable.card_back);
-        card5.setImageResource(R.drawable.card_back);
-        card6.setImageResource(R.drawable.card_back);
-        card7.setImageResource(R.drawable.card_back);
-        card8.setImageResource(R.drawable.card_back);
+        return R.drawable.card_back;
     }
 }

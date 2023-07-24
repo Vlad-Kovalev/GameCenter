@@ -26,17 +26,22 @@
         android:gravity="center"
         android:layout_gravity="center"/>
 
-    <Space android:layout_width="wrap_content" android:layout_height="175dp"/>
+    <Space android:layout_width="wrap_content" android:layout_height="200dp"/>
+
 
     <TextView
         android:id="@+id/tvName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello XXX"
-        android:textSize="20sp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="XXX you won in 00 turns!"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="#333333"
+        android:background="@drawable/rounded_corners"
+        android:gravity="center"
         android:layout_gravity="center"
-        android:layout_weight="0"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:visibility="visible"/>
 
     <GridLayout
         android:id="@+id/glCards"
@@ -48,49 +53,49 @@
         android:useDefaultMargins="true"
         android:layout_gravity="center_horizontal">
 
-        <ImageButton
+        <ImageView
             android:id="@+id/card1"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:src="@drawable/card_back" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/card2"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:src="@drawable/card_back"/>
 
-        <ImageButton
+        <ImageView
             android:id="@+id/card3"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:src="@drawable/card_back"/>
 
-        <ImageButton
+        <ImageView
             android:id="@+id/card4"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:src="@drawable/card_back" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/card5"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:src="@drawable/card_back"/>
 
-        <ImageButton
+        <ImageView
             android:id="@+id/card6"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:src="@drawable/card_back"/>
 
-        <ImageButton
+        <ImageView
             android:id="@+id/card7"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:src="@drawable/card_back"/>
 
-        <ImageButton
+        <ImageView
             android:id="@+id/card8"
             android:layout_width="75dp"
             android:layout_height="75dp"
@@ -105,7 +110,8 @@
         android:text="Restart"
         android:textSize="18sp"
         android:textColor="#333333"
-        android:background="@drawable/rounded_corners"
-        android:layout_gravity="center_horizontal"/>
+        android:background="@drawable/restart_reroll_btn"
+        android:layout_gravity="center_horizontal"
+        style="?android:attr/borderlessButtonStyle"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
