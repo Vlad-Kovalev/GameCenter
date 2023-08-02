@@ -37,6 +37,11 @@
 
     <Space android:layout_width="wrap_content" android:layout_height="10dp"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
     <TableLayout
         android:id="@+id/tlShow"
         android:layout_width="match_parent"
@@ -44,27 +49,27 @@
 
         <TableRow android:gravity="center">
             <ImageView
-                android:id="@+id/ibEasy"
-                android:layout_width="125dp"
+                android:id="@+id/ivMemoryGame"
+                android:layout_width="0dp"
                 android:layout_height="125dp"
+                android:layout_weight="1"
                 android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:src="@drawable/memorygame" />
+                android:src="@drawable/memorygame1" />
 
             <ImageView
-                android:id="@+id/ibEasy"
-                android:layout_width="125dp"
+                android:id="@+id/ivTruthOrDare"
+                android:layout_width="0dp"
                 android:layout_height="125dp"
+                android:layout_weight="1"
                 android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:src="@drawable/memorygame" />
+                android:src="@drawable/truthordare" />
 
             <ImageView
-                android:id="@+id/ibMedium"
-                android:layout_width="125dp"
+                android:id="@+id/ivDiceRoll"
+                android:layout_width="0dp"
                 android:layout_height="125dp"
+                android:layout_weight="1"
                 android:layout_gravity="center"
-                android:layout_margin="10dp"
                 android:src="@drawable/diceroll" />
         </TableRow>
 
@@ -75,7 +80,8 @@
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:gravity="center_horizontal"
-                android:layout_width="100dp"/>
+                android:layout_width="100dp"
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/tvTruthOrDare"
@@ -83,7 +89,8 @@
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:gravity="center_horizontal"
-                android:layout_width="100dp"/>
+                android:layout_width="100dp"
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/tvDiceRoll"
@@ -91,10 +98,11 @@
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:gravity="center_horizontal"
-                android:layout_width="100dp"/>
+                android:layout_width="100dp"
+                android:layout_weight="1"/>
         </TableRow>
-
     </TableLayout>
+    </LinearLayout>
 
     <Space android:layout_width="wrap_content" android:layout_height="66dp"/>
 

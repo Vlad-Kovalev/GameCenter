@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class center extends AppCompatActivity {
@@ -20,8 +19,8 @@ public class center extends AppCompatActivity {
         setContentView(R.layout.activity_center);
         if (getSupportActionBar() != null) {getSupportActionBar().hide();}
 
-        ibEasy = findViewById(R.id.ibEasy);
-        ibMedium = findViewById(R.id.ibMedium);
+        ibEasy = findViewById(R.id.ivMemoryGame);
+        ibMedium = findViewById(R.id.ivDiceRoll);
         etName = findViewById(R.id.etName);
 
 
