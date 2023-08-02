@@ -32,6 +32,7 @@ public class memory_game extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memory_game);
         if (getSupportActionBar() != null) {getSupportActionBar().hide();}
+
         Intent intent = getIntent();
         receivedName = intent.getStringExtra("keyname");
         tvName = findViewById(R.id.tvName); btnBack = findViewById(R.id.btnBack); btnRestart = findViewById(R.id.btnRestart); ivCongrats = findViewById(R.id.ivCongrats); glCards = findViewById(R.id.glCards);
