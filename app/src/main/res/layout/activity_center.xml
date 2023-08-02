@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="#9ABFE3"
     tools:context=".center">
@@ -47,30 +48,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TableRow android:gravity="center">
-            <ImageView
+        <TableRow android:gravity="center" android:weightSum="34">
+
+            <Space android:layout_width="0dp" android:layout_weight="1"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/ivMemoryGame"
                 android:layout_width="0dp"
                 android:layout_height="125dp"
-                android:layout_weight="1"
                 android:layout_gravity="center"
-                android:src="@drawable/memorygame1" />
+                android:layout_weight="10"
+                app:shapeAppearanceOverlay="@style/roundedImageView"
+                app:srcCompat="@drawable/memorygame1"/>
 
-            <ImageView
+            <Space android:layout_width="0dp" android:layout_weight="1"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/ivTruthOrDare"
                 android:layout_width="0dp"
                 android:layout_height="125dp"
-                android:layout_weight="1"
                 android:layout_gravity="center"
-                android:src="@drawable/truthordare" />
+                android:layout_weight="10"
+                app:shapeAppearanceOverlay="@style/roundedImageView"
+                app:srcCompat="@drawable/truthordare" />
 
-            <ImageView
+            <Space android:layout_width="0dp" android:layout_weight="1"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/ivDiceRoll"
-                android:layout_width="0dp"
+                android:layout_width="3dp"
                 android:layout_height="125dp"
-                android:layout_weight="1"
+                android:layout_weight="10"
                 android:layout_gravity="center"
-                android:src="@drawable/diceroll" />
+                app:shapeAppearanceOverlay="@style/roundedImageView"
+                app:srcCompat="@drawable/diceroll" />
+
+            <Space android:layout_width="0dp" android:layout_weight="1"/>
         </TableRow>
 
         <TableRow android:gravity="center">

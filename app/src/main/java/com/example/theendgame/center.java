@@ -6,11 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageView;
+
+import com.google.android.material.imageview.ShapeableImageView;
 
 public class center extends AppCompatActivity {
 
-    ImageView ibEasy, ibMedium;
+    ShapeableImageView ivMemoryGame, ivTruthOrDare, ivDiceRoll;
     EditText etName;
 
     @Override
@@ -19,12 +20,13 @@ public class center extends AppCompatActivity {
         setContentView(R.layout.activity_center);
         if (getSupportActionBar() != null) {getSupportActionBar().hide();}
 
-        ibEasy = findViewById(R.id.ivMemoryGame);
-        ibMedium = findViewById(R.id.ivDiceRoll);
+        ivMemoryGame = findViewById(R.id.ivMemoryGame);
+        ivTruthOrDare = findViewById(R.id.ivTruthOrDare);
+        ivDiceRoll = findViewById(R.id.ivDiceRoll);
         etName = findViewById(R.id.etName);
 
 
-        ibEasy.setOnClickListener(new View.OnClickListener() {
+        ivMemoryGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String name = etName.getText().toString();
@@ -34,7 +36,17 @@ public class center extends AppCompatActivity {
             }
          });
 
-        ibMedium.setOnClickListener(new View.OnClickListener() {
+        ivTruthOrDare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name = etName.getText().toString();
+                Intent intent = new Intent(center.this, TruthOrDare.class);
+                intent.putExtra("keyname", name);
+                startActivity(intent);
+            }
+        });
+
+        ivDiceRoll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String name = etName.getText().toString();
