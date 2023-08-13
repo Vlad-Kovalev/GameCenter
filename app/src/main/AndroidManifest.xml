@@ -15,6 +15,20 @@
         android:theme="@style/Theme.TheEndGame"
         tools:targetApi="31">
         <activity
+            android:name=".FourInRow"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".TruthOrDarePlayerChooserActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".TruthOrDare"
             android:exported="false">
             <meta-data

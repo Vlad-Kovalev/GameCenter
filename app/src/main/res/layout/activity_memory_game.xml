@@ -64,48 +64,56 @@
             android:id="@+id/card1"
             android:layout_width="75dp"
             android:layout_height="75dp"
+            android:clickable="true"
             android:src="@drawable/card_back" />
 
         <ImageView
             android:id="@+id/card2"
             android:layout_width="75dp"
             android:layout_height="75dp"
+            android:clickable="true"
             android:src="@drawable/card_back"/>
 
         <ImageView
             android:id="@+id/card3"
             android:layout_width="75dp"
             android:layout_height="75dp"
+            android:clickable="true"
             android:src="@drawable/card_back"/>
 
         <ImageView
             android:id="@+id/card4"
             android:layout_width="75dp"
             android:layout_height="75dp"
+            android:clickable="true"
             android:src="@drawable/card_back" />
 
         <ImageView
             android:id="@+id/card5"
             android:layout_width="75dp"
             android:layout_height="75dp"
+            android:clickable="true"
             android:src="@drawable/card_back"/>
 
         <ImageView
             android:id="@+id/card6"
             android:layout_width="75dp"
             android:layout_height="75dp"
+            android:clickable="true"
             android:src="@drawable/card_back"/>
 
         <ImageView
             android:id="@+id/card7"
             android:layout_width="75dp"
             android:layout_height="75dp"
+            android:clickable="true"
             android:src="@drawable/card_back"/>
 
         <ImageView
             android:id="@+id/card8"
             android:layout_width="75dp"
             android:layout_height="75dp"
+            android:clickable="true"
             android:src="@drawable/card_back"/>
 
     </GridLayout>
@@ -119,6 +127,7 @@
         android:textColor="#333333"
         android:background="@drawable/restart_reroll_btn"
         android:layout_gravity="center_horizontal"
-        style="?android:attr/borderlessButtonStyle"/>
+        style="?android:attr/borderlessButtonStyle"
+        android:visibility="invisible"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

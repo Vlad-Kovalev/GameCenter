@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FourInRow"
+    android:orientation="vertical"
+    android:background="#C0E891">
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/arrow_back_foreground"
+        android:background="@android:color/transparent"/>
+
+    <Space android:layout_width="wrap_content" android:layout_height="25dp"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="ארבע בשורה"
+        android:background="@drawable/rounded_corners"
+        android:textColor="#A8333333"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <Space android:layout_width="wrap_content" android:layout_height="125dp" />
+
+    <ImageView android:layout_width="match_parent" android:layout_height="5dp" android:background="#2980b9"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <include android:id="@+id/row1" layout="@layout/board_dimen"/>
+        <include android:id="@+id/row2" layout="@layout/board_dimen"/>
+        <include android:id="@+id/row3" layout="@layout/board_dimen"/>
+        <include android:id="@+id/row4" layout="@layout/board_dimen"/>
+        <include android:id="@+id/row5" layout="@layout/board_dimen"/>
+        <include android:id="@+id/row6" layout="@layout/board_dimen"/>
+    </LinearLayout>
+    <ImageView android:layout_width="match_parent" android:layout_height="5dp" android:background="#2980b9"/>
+
+</LinearLayout>

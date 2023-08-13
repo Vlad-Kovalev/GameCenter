@@ -19,7 +19,7 @@ public class memory_game extends AppCompatActivity {
 
     private TextView tvName;
     private GridLayout glCards;
-    private ImageView card1, card2, card3, card4, card5, card6, card7, card8, ivCongrats, btnBack;
+    private ImageView ivCongrats, btnBack;
     private ImageView firstFlippedCard; private ImageView secondFlippedCard;
     private AppCompatButton btnRestart;
     private ImageView[] cards = new ImageView[8];
@@ -36,7 +36,6 @@ public class memory_game extends AppCompatActivity {
         Intent intent = getIntent();
         receivedName = intent.getStringExtra("keyname");
         tvName = findViewById(R.id.tvName); btnBack = findViewById(R.id.btnBack); btnRestart = findViewById(R.id.btnRestart); ivCongrats = findViewById(R.id.ivCongrats); glCards = findViewById(R.id.glCards);
-        card1 = findViewById(R.id.card1); card2 = findViewById(R.id.card2); card3 = findViewById(R.id.card3); card4 = findViewById(R.id.card4); card5 = findViewById(R.id.card5); card6 = findViewById(R.id.card6); card7 = findViewById(R.id.card7); card8 = findViewById(R.id.card8);
         cards[0] = findViewById(R.id.card1); cards[1] = findViewById(R.id.card2); cards[2] = findViewById(R.id.card3); cards[3] = findViewById(R.id.card4); cards[4] = findViewById(R.id.card5); cards[5] = findViewById(R.id.card6); cards[6] = findViewById(R.id.card7); cards[7] = findViewById(R.id.card8);
         Collections.shuffle(Arrays.asList(cards));
 
@@ -62,7 +61,6 @@ public class memory_game extends AppCompatActivity {
                 recreate();
             }
         });
-
     }
 
     private void flipCard(ImageView card) {
@@ -70,10 +68,12 @@ public class memory_game extends AppCompatActivity {
         if (firstFlippedCard == null) {
             firstFlippedCard = card;
             card.setImageResource(getImageResource(card));
+            firstFlippedCard.setEnabled(false);
             tryCount++;
         }
         else if (secondFlippedCard == null) {
             secondFlippedCard = card;
+            secondFlippedCard.setEnabled(false);
             card.setImageResource(getImageResource(card));
 
             if (getImageResource(firstFlippedCard) == getImageResource(secondFlippedCard)) {
@@ -95,6 +95,7 @@ public class memory_game extends AppCompatActivity {
                     int heightInPixels = (int) (heightInDp * scale + 0.5f);
                     tvName.getLayoutParams().height = heightInPixels; tvName.invalidate();
                     tvName.setText("Congratulations " + receivedName + "!\n" + "you won in " + tryCount + " turns");
+                    btnRestart.setVisibility(View.VISIBLE);
                 }
             } else {
                 Handler handler = new Handler();
@@ -103,6 +104,10 @@ public class memory_game extends AppCompatActivity {
                     public void run() {
                         firstFlippedCard.setImageResource(R.drawable.card_back);
                         secondFlippedCard.setImageResource(R.drawable.card_back);
+
+                        firstFlippedCard.setEnabled(true);
+                        secondFlippedCard.setEnabled(true);
+
                         firstFlippedCard = null;
                         secondFlippedCard = null;
                         tryCount++;
@@ -113,7 +118,6 @@ public class memory_game extends AppCompatActivity {
     }
 
     private int getImageResource(ImageView card) {
-
         if (card == cards[0] || card == cards[1]) {
             return R.drawable.firstpic;}
         else if (card == cards[2] || card == cards[3]) {

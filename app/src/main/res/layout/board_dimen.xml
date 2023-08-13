@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:weightSum="77"
+    android:padding="3dp"
+    android:background="#2980b9">
+
+    <ImageView android:id="@+id/col1" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="10" android:background="@drawable/circles"/><Space android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+    <ImageView android:id="@+id/col2" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="10" android:background="@drawable/circles"/><Space android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+    <ImageView android:id="@+id/col3" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="10" android:background="@drawable/circles"/><Space android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+    <ImageView android:id="@+id/col4" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="10" android:background="@drawable/circles"/><Space android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+    <ImageView android:id="@+id/col5" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="10" android:background="@drawable/circles"/><Space android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+    <ImageView android:id="@+id/col6" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="10" android:background="@drawable/circles"/><Space android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+    <ImageView android:id="@+id/col7" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="10" android:background="@drawable/circles"/><Space android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+
+</LinearLayout>
