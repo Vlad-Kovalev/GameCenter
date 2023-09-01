@@ -10,11 +10,11 @@ import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-public class FourInRow extends AppCompatActivity {
+public class FourInRow extends AppCompatActivity{
 
     private ImageButton btnBack;
     private View[] rows = new View[6];
-    private ImageView[] cols = new ImageView[7];
+    private ImageView[][] cols = new ImageView[6][7];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,18 +31,27 @@ public class FourInRow extends AppCompatActivity {
             }
         });
 
-        for(int i=0;i<rows.length;i++) {
+        for(int i = 0; i < rows.length; i++) {
             String rowId = "row" + (i + 1);
             int rowResId = getResources().getIdentifier(rowId, "id", getPackageName());
             rows[i] = ((View) findViewById(rowResId));
-                    // rows findViewById in loop
+            // rows findViewById in loop
 
-            for (int j = 0; j < cols.length; j++) {
+            for (int j = 0; j < cols[i].length; j++) {
                 String circlesId = "col" + (j + 1);
                 int circleResId = getResources().getIdentifier(circlesId, "id", getPackageName());
-                cols[j] = ((ImageView) rows[i].findViewById(circleResId));
-            }       // cols findViewById in loop
-        } // grid views defining (in loops)
+                cols[i][j] = ((ImageView) rows[i].findViewById(circleResId));
 
+                // add click listener to each ImageView
+                cols[i][j].setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // Perform your action here
+                        // For example, change the image of the clicked ImageView
+                        ((ImageView)v).setImageResource(R.drawable.red_circle);
+                    }
+                });
+            }       // cols findViewById and setting listeners in loop
+        }
     }
 }
